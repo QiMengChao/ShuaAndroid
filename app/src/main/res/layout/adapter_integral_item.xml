@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="@dimen/dp_20"
+    android:paddingTop="@dimen/dp_20"
+    >
+
+    <TextView
+        android:id="@+id/integralType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="签到"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_18"
+        />
+    <TextView
+        android:id="@+id/integralDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="2021-05-25 09:25:43 签到 , 积分：11 + 25"
+        app:layout_constraintTop_toBottomOf="@id/integralType"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/integralTotal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textSize="@dimen/sp_14"
+        />
+    <TextView
+        android:id="@+id/integralTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25"
+        app:layout_constraintTop_toTopOf="@id/integralDesc"
+        app:layout_constraintBottom_toBottomOf="@id/integralDesc"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/black"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_zero5"
+        app:layout_constraintTop_toBottomOf="@id/integralDesc"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/color_EB7347"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

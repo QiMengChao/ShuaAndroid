@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">耍安卓</string>
+    <string name="status_loading">加载中...</string>
+    <string name="status_error">发生错误了</string>
+    <string name="status_empty">数据为空</string>
+    <string name="status_network">网络异常</string>
+    <string name="search">搜索</string>
+    <string name="integral">积分</string>
+    <string name="rank">排名</string>
+    <string name="mine_integral">我的积分</string>
+    <string name="mine_collect">我的收藏</string>
+    <string name="mine_share">我的分享</string>
+    <string name="mine_article">我的文章</string>
+    <string name="mine_set">我的设置</string>
+    <string name="exit">退出</string>
+</resources>

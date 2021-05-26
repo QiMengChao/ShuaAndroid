@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/flexItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_5"
+    android:background="@drawable/flex_item_shape"
+    android:layout_marginVertical="@dimen/dp_4"
+    android:layout_marginHorizontal="@dimen/dp_6"
+    android:paddingVertical="@dimen/dp_6"
+    android:paddingHorizontal="@dimen/dp_10"
+    android:textSize="@dimen/sp_14"
+    />

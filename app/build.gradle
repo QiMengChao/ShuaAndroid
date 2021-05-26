@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.qmc.shuaandroid"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation project(path: ':network')
+
+    def dependencies = rootProject.ext.dependencies
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation dependencies.kotlinCore
+    implementation dependencies.appcompat
+    implementation dependencies.constraintlayout
+    testImplementation dependencies.junit
+    androidTestImplementation dependencies.extJunit
+    androidTestImplementation dependencies.espresso
+    // kotlin协程
+    implementation dependencies.coroutines
+    // LiveData
+    implementation dependencies.livedata
+    // ViewModel
+    implementation dependencies.viewmodel
+    // LifeCycle
+    implementation dependencies.lifecycle
+    // lottie
+    implementation dependencies.lottie
+    // 轮播图
+    implementation dependencies.banner
+
+    // 网络加载状态
+    implementation dependencies.loadsir
+    // 列表
+    implementation dependencies.recyclerview
+    // 指示器
+    implementation dependencies.MagicIndicator
+    // 工具类
+    implementation dependencies.utils
+    // ViewModelProviders
+    implementation dependencies.extensions
+    // 状态栏
+    implementation dependencies.immersionbar
+    // 图片加载
+    implementation dependencies.coil
+    implementation dependencies.viewpager2
+    // 卡片
+    implementation dependencies.cardview
+    implementation dependencies.material
+    // 适配器
+    implementation dependencies.BaseRecyclerViewAdapterHelper
+    // 下拉刷新
+    implementation dependencies.smartCore
+    implementation dependencies.smartHeader
+    implementation dependencies.smartFooter
+    // 流式布局
+    implementation dependencies.flexbox
+    // 好用的webview
+    implementation dependencies.agentweb
+    // popup
+    implementation dependencies.XPopup
+    // 事件总线
+    implementation dependencies.eventbus
+    // 动态权限
+    implementation dependencies.easypermissions
+}
