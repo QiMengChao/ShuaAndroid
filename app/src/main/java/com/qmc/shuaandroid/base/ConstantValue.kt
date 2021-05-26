@@ -15,3 +15,4 @@ const val LOGIN_SUCCESS_CODE = "10001"
 const val USER_ID = "USER_ID"
 const val PASS_WORD = "PASS_WORD"
 const val PICTURE_REQUEST_CODE = 1001
+const val CAMERA_REQUEST_CODE = 1002
